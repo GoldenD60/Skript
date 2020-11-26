@@ -107,6 +107,7 @@ echo loop: Loops code certain number of times
 echo mathf: Used for math in 32-bit integer limit. Except from sqrt and exp.
 echo help: Displays this.
 echo documentation/onlinehelp: Shows online help.
+echo playsound: Plays a sound.
 goto :line
 :end
 :onlhelp

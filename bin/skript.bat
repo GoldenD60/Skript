@@ -28,21 +28,25 @@ echo That command doesn't exist
 goto :line
 :print
 set /P _inputname=print ^> 
+set "pr=%_inputname%"
 echo %_inputname%
 goto :line
 :end
 :sout
 set /P _inputname=sout ^> 
+set "pr=%_inputname%"
 echo %_inputname%
 goto :line
 :end
 :input
 set /P _inputname=input ^> 
+set "in=%_inputname%"
 set /P _inputname=%_inputname%
 goto :line
 :end
 :sin
 set /P _inputname=sin ^> 
+set "in=%_inputname%"
 set /P _inputname=%_inputname%
 goto :line
 :end
@@ -53,6 +57,7 @@ if "%_inputname%"=="square" goto :dsquare
 goto :line
 :end
 :dtriangle
+set "asciid=%_inputname%"
 echo     ^/^\
 echo    ^/##^\
 echo   ^/####^\
@@ -61,6 +66,7 @@ echo ^/________^\
 goto :line
 :end
 :dsquare
+set "asciid=%_inputname%"
 echo ___________
 echo ^|         ^|
 echo ^|         ^|
@@ -72,20 +78,6 @@ goto :line
 set /P _inputname=loop(int) ^> 
 Set "loopt=%_inputname%"
 goto :loops
-:end
-:loops
-set /P _inputname=loop(string) ^> 
-Set "loops=%_inputname%"
-goto :loopf
-:end
-:loopf
-Set "start=1"
-Set "step=1"
-
-For /L %%A In (%start%,%step%,%loopt%) Do (
-    Echo %loops%
-)
-goto :line
 :end
 :mathf
 Set /P _inputname=mathf(operator) ^> 

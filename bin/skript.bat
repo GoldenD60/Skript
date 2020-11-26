@@ -6,7 +6,7 @@ if "%_inputname%"=="editor" goto :editor
 cls
 goto :start
 :console
-echo Skript 1.0.0
+echo Skript 1.0.1
 echo Type "help" for more information.
 goto :line
 :line
@@ -23,6 +23,7 @@ if "%_inputname%"=="help" goto :help
 if "%_inputname%"=="documentation" goto :onlhelp
 if "%_inputname%"=="onlinehelp" goto :onlhelp
 if "%_inputname%"=="window" goto :empwin
+if "%_inputname%"=="playsound" goto :playsound
 echo That command doesn't exist
 goto :line
 :print
@@ -130,6 +131,12 @@ goto :line
 cd __wins__
 py empwin.py
 cd ..
+goto :line
+:end
+:playsound
+Set /P _inputname=playsound(soundFile [.aac, .ac3, .aif, .aifc, .aiff, .amr, .au, .caf, .flac, .m4a, .m4b, .mp3, .oga, .sfark, .voc, .wav, .weba, .wma]) ^> 
+start %_inputname%
+start 
 goto :line
 :end
 :exit

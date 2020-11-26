@@ -11,19 +11,16 @@ echo Type "help" for more information.
 goto :line
 :line
 set /P _inputname=^> 
-if "%_inputname%"=="print" goto :print
+if "%_inputname%"=="say" goto :print
 if "%_inputname%"=="exit" goto :exit
-if "%_inputname%"=="input" goto :input
-if "%_inputname%"=="sin" goto :sin
-if "%_inputname%"=="sout" goto :print
-if "%_inputname%"=="asciidisplay" goto :asciidisplay
-if "%_inputname%"=="loop" goto :loop
-if "%_inputname%"=="mathf" goto :mathf
+if "%_inputname%"=="get input from user" goto :input
+if "%_inputname%"=="display in ascii text" goto :asciidisplay
+if "%_inputname%"=="calculate" goto :mathf
 if "%_inputname%"=="help" goto :help
 if "%_inputname%"=="documentation" goto :onlhelp
 if "%_inputname%"=="onlinehelp" goto :onlhelp
-if "%_inputname%"=="window" goto :empwin
-if "%_inputname%"=="playsound" goto :playsound
+if "%_inputname%"=="open an empty window" goto :empwin
+if "%_inputname%"=="play a sound" goto :playsound
 echo That command doesn't exist
 goto :line
 :print

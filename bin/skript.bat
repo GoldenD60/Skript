@@ -109,7 +109,7 @@ echo documentation/onlinehelp: Shows online help.
 goto :line
 :end
 :onlhelp
-start "" https://goldend60.wixsite.com/main/skript-help
+start "" https://github.com/GoldenD60/Skript/wiki
 goto :line
 :end
 :editor

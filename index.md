@@ -42,11 +42,13 @@ To run it, follow these steps:
 5. Drag skript.bat into the Command Prompt/Terminal
 6. Hit enter in the Command Prompt/Terminal
 
+## Text-Based Commands
+
 ### Saying "Hello World"
 
 Let's do something basic, also you might be confused because the Command Prompt/Terminal says ```Do you want to open the console or the skript editor?``` just ignore this message for now. Let's talk about how it's done. Skript is just like you are typing in english sentences, if you want it to say something you put _say_ but, Skript need some 'Arguments' or some people call them 'Parameters' but Arguments and Parameters are the exact same thing. Basically, it needs some information to run the command. So if we go back to the Command Prompt/Terminal and it want to know if you want to open the console or the skript editor. Because you are just starting out with no experience, just type ```console```
 and you need to spell it **exactly**. Once you have typed in that, it's going to load the console up. You should have something like this:
-```skript
+```commandprompt
 Do you want to open the console or the skript editor? console
 Skript 1.0.4
 Type "help" for more information.
@@ -55,7 +57,7 @@ Type "help" for more information.
 
 Obviously I probably don't have the same Skript version as you, but it doesn't really matter too much. You can type in ```say``` and it should say back ```print >``` Now, this is where the Arguments comes in. Type in 'Hello World!' your Command Prompt/Terminal should look like this:
 
-```skript
+```commandprompt
 > say
 print > Hello World!
 Hello World!
@@ -64,8 +66,55 @@ Hello World!
 ### Getting User Input
 
 Now the rest of the coding is simple. To get input from the user just type quite simply 'get input from user', it should look something like this:
-```skript
+```commandprompt
 Skript 1.0.4
 Type "help" for more information.
 > get input from user
+```
+
+### Displaying a shape in ASCII text
+
+Let's create a shape in ASCII text, firstly type ```display in ASCII text``` then you can display either a triangle or square. I'm going to type ```square```, On my screen it looks something like this:
+
+```commandprompt
+Skript 1.0.4
+Type "help" for more information.
+> display in ASCII text
+asciidisplay [Triangle/Square]> square
+___________
+|         |
+|         |
+|         |
+|_________|
+>
+```
+
+When you type in triangle, it looks something like this:
+
+```commandprompt
+Skript 1.0.4
+Type "help" for more information.
+> display in ASCII text
+asciidisplay [Triangle/Square]> triangle
+    /\
+   /##\
+  /####\
+ /######\
+/________\
+>
+```
+
+## Integer-Based Commands
+
+I need some math for my maths homework! Good thing is I have got skript, Let's do some calculating. To start doing some math, type ```calculate``` now this command is unique to every other command. Because it needs more than 1 argument, so type the operation, in this case '+', then the first number of the calculation. What I mean by this is let's say we have `a+b`, the first number of the calculation is `a`. Let's do the calculation 2 + 2, Make sure that when you do your calculation. Just make sure your numbers are under 2 billion or 2,147,483,647 or else it will show you an error. So let's type in the first number of the calculation '2', then. Now the last number of the calculation, 2, your screen should look like this:
+
+```commandprompt
+Skript 1.0.4
+Type "help" for more information.
+> calculate
+mathf(operator) > +
+mathf(int[1]) > 2
+mathf(int[2]) > 2
+4
+>
 ```

@@ -10,13 +10,15 @@ def run_command():
     return
 
 # Control Button
-label1 = tk.Label(root, text='Hello this is some very long text, anyways I like peanut butter sandwiches :)')
-label1.config(font=('Comic Sans MS', 25))
+# Control Label
+# Control Font
+# Control Check Box Var
 # Control Check Button
 # Control Entry
-# Control Listbox
-# Control Message
+message1 = tk.Message(root, textvariable='hi')
 # Control Radio Button
-canvas1.create_window(170, 130, window=label1)
+# Extra
+message1.pack()
+canvas1.create_window(170, 130, window=message1)
 
 root.mainloop()

@@ -12,11 +12,11 @@ def run_command():
 # Control Button
 # Control Label
 # Control Font
+# Control Check Box Var
 # Control Check Button
 # Control Entry
-# Control Listbox
-# Control Message
-# Control Radio Button
+# Extra
+# Pack
 # Window
 
 root.mainloop()

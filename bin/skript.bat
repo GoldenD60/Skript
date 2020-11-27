@@ -18,7 +18,7 @@ if "%_inputname%"=="display in ascii text" goto :asciidisplay
 if "%_inputname%"=="calculate" goto :mathf
 if "%_inputname%"=="help" goto :help
 if "%_inputname%"=="documentation" goto :onlhelp
-if "%_inputname%"=="onlinehelp" goto :onlhelp
+if "%_inputname%"=="online help" goto :onlhelp
 if "%_inputname%"=="open an empty window" goto :empwin
 if "%_inputname%"=="play a sound" goto :playsound
 if "%_inputname%"=="open a window with controls" goto :winwcontrol

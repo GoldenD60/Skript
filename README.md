@@ -1,58 +1,122 @@
-# Skript
-Skript is a Programming Language with easy-to-learn commands
+## Welcome to the Skript Documentation (copy from [online documentation](https://goldend60.github.io/Skript))
 
-Requirements:
+## Context
 
-Windows 7 and above or Linux or Mac OS X.
+### Installation
 
-Python
-VBScript (you should have this already except from Windows XP users)
+Skript is a lightweight easy-to-use coding language for games.
+To install, Check if you have these programs installed:
 
-To install python (instant download) go to:
-Windows: https://www.python.org/ftp/python/3.9.0/python-3.9.0-amd64.exe
+Python and VBScript
 
-Linux/UNIX: https://www.python.org/downloads/release/python-390/
+You will need Windows 7 and above or Linux or Mac OS X.
 
-Max OS X: https://www.python.org/downloads/release/python-390/
+### Python
 
-Other: https://www.python.org/download/other/
+[Windows](https://www.python.org/ftp/python/3.9.0/python-3.9.0-amd64.exe)
 
-To install VBScript (instant download) go to:
+[Linux/Unix](https://www.python.org/ftp/python/3.9.0/Python-3.9.0.tgz)
 
-Windows XP: https://www.microsoft.com/en-gb/download/confirmation.aspx?id=8247
+[Max OS X](https://www.python.org/ftp/python/3.9.0/python-3.9.0-macosx10.9.pkg)
 
-If you are a mac user, don't worry at all!
+[Other](https://www.python.org/download/other)
 
-Go to: http://www.barebones.com/products/textwrangler/
+### VBScript
 
-To install for Batch and VBScript
+[Windows XP](https://www.microsoft.com/en-gb/download/confirmation.aspx?id=8247)
 
-If you are a linux user, don't worry at all!
+[Mac](http://www.barebones.com/products/textwrangler/)
 
-Run this in the terminal: sudo apt-get install wine
+Linux: Run this in the terminal: ```sudo apt-get install wine```
 
-To install for VBScript (Linux already has Batch Script installed)
+For more details visit the [python website](https://python.org).
 
-How to run skript:
-1. Go to '`Releases`'
-2. Go to the latest `release`
-3. Download the `attached` file
-4. Open the `Command Prompt`
-5. Open the '`Skript`' folder in the repository folder
-6. Type '`cd`' then a space in the `Command Prompt`
-7. Drag the '`bin`' folder into the `Command Prompt` and hit enter
-8. When it asks you if you want to load the `console` or the `editor`, you can type either '`console`' or '`editor`' (`Case Sensitive`)
+## Getting Started
 
-If you are a beginner type 'help' for the commands you can write to get started,
-or if you want a further explanation just type 'documentation' or 'onlinehelp' and it will open your browser for the `github wiki page`
+### How to run
 
-Basic Commands To Get Started:
+To run it, follow these steps:
+
+1. Open the Command Prompt/Terminal
+2. Type cd/ls then a space after
+3. In File Explorer/Finder, find where you stored the repository.
+4. Go into the folder called 'bin'
+5. Drag skript.bat into the Command Prompt/Terminal
+6. Hit enter in the Command Prompt/Terminal
+
+## Text-Based Commands
+
+### Saying "Hello World"
+
+Let's do something basic, also you might be confused because the Command Prompt/Terminal says ```Do you want to open the console or the skript editor?``` just ignore this message for now. Let's talk about how it's done. Skript is just like you are typing in english sentences, if you want it to say something you put _say_ but, Skript need some 'Arguments' or some people call them 'Parameters' but Arguments and Parameters are the exact same thing. Basically, it needs some information to run the command. So if we go back to the Command Prompt/Terminal and it want to know if you want to open the console or the skript editor. Because you are just starting out with no experience, just type ```console```
+and you need to spell it **exactly**. Once you have typed in that, it's going to load the console up. You should have something like this:
+```commandprompt
+Do you want to open the console or the skript editor? console
+Skript 1.0.4
+Type "help" for more information.
+>
 ```
-exit: Exit skript to command prompt
-calculate: Used for math in 32-bit integer limit. Except from sqrt and exp.
-say: Prints message
-get input from user: Gets input from user
-display in ASCII text: Displays a shape on the screen
-help: Displays Help.
-documentation/online help: Shows online help.
+
+Obviously I probably don't have the same Skript version as you, but it doesn't really matter too much. You can type in ```say``` and it should say back ```print >``` Now, this is where the Arguments comes in. Type in 'Hello World!' your Command Prompt/Terminal should look like this:
+
+```commandprompt
+> say
+print > Hello World!
+Hello World!
+> 
+```
+### Getting User Input
+
+Now the rest of the coding is simple. To get input from the user just type quite simply 'get input from user', it should look something like this:
+```commandprompt
+Skript 1.0.4
+Type "help" for more information.
+> get input from user
+```
+
+### Displaying a shape in ASCII text
+
+Let's create a shape in ASCII text, firstly type ```display in ASCII text``` then you can display either a triangle or square. I'm going to type ```square```, On my screen it looks something like this:
+
+```commandprompt
+Skript 1.0.4
+Type "help" for more information.
+> display in ASCII text
+asciidisplay [Triangle/Square]> square
+___________
+|         |
+|         |
+|         |
+|_________|
+>
+```
+
+When you type in triangle, it looks something like this:
+
+```commandprompt
+Skript 1.0.4
+Type "help" for more information.
+> display in ASCII text
+asciidisplay [Triangle/Square]> triangle
+    /\
+   /##\
+  /####\
+ /######\
+/________\
+>
+```
+
+## Integer-Based Commands
+
+I need some math for my maths homework! Good thing is I have got skript, Let's do some calculating. To start doing some math, type ```calculate``` now this command is unique to every other command. Because it needs more than 1 argument, so type the operation, in this case '+', then the first number of the calculation. What I mean by this is let's say we have `a+b`, the first number of the calculation is `a`. Let's do the calculation 2 + 2, Make sure that when you do your calculation. Just make sure your numbers are under 2 billion or 2,147,483,647 or else it will show you an error. So let's type in the first number of the calculation '2', then. Now the last number of the calculation, 2, your screen should look like this:
+
+```commandprompt
+Skript 1.0.4
+Type "help" for more information.
+> calculate
+mathf(operator) > +
+mathf(int[1]) > 2
+mathf(int[2]) > 2
+4
+>
 ```

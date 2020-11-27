@@ -46,11 +46,6 @@ To run it, follow these steps:
 
 Let's do something basic, also you might be confused because the Command Prompt/Terminal says ```Do you want to open the console or the skript editor?``` just ignore this message for now. Let's talk about how it's done. Skript is just like you are typing in english sentences, if you want it to say something you put _say_ but, Skript need some 'Arguments' or some people call them 'Parameters' but Arguments and Parameters are the exact same thing. Basically, it needs some information to run the command. So if we go back to the Command Prompt/Terminal and it want to know if you want to open the console or the skript editor. Because you are just starting out with no experience, just type ```console``` and you need to spell it **exactly**. Once you have typed in that, it's going to load the console up. You should have something like this:
 ```
-Microsoft Windows [Version 10.0.18363.1198]
-(c) 2019 Microsoft Corporation. All rights reserved.
-
-C:\Users\David>gitsk
-
 C:\Users\David>echo off
 Do you want to open the console or the skript editor? console
 Skript 1.0.4

@@ -13,3 +13,15 @@ How to run skript:
 
 If you are a beginner type 'help' for the commands you can write to get started,
 or if you want a further explanation just type 'documentation' or 'onlinehelp' and it will open your browser for the `github wiki page`
+
+Basic Commands To Get Started:
+```
+exit: Exit skript to command prompt
+loop: Loops code certain number of times
+mathf: Used for math in 32-bit integer limit. Except from sqrt and exp.
+print/sout: Prints message
+input/sin: Gets input from user
+asciidisplay: Displays a shape on the screen
+help: Displays Help.
+documentation/onlinehelp: Shows online help.
+```

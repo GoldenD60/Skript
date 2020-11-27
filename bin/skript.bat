@@ -6,7 +6,7 @@ if "%_inputname%"=="editor" goto :editor
 cls
 goto :start
 :console
-echo Skript 1.0.3
+echo Skript 1.0.4
 echo Type "help" for more information.
 goto :line
 :line

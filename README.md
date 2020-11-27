@@ -11,7 +11,9 @@
 7. [Saying "Hello World"](https://github.com/GoldenD60/Skript#saying-hello-world)
 8. [Getting User Input](https://github.com/GoldenD60/Skript#getting-user-input)
 9. [Displaying a shape in ASCII text](https://github.com/GoldenD60/Skript#displaying-a-shape-in-ascii-text)
-10. [Integer-Based Commands]
+10. [Integer-Based Commands](https://github.com/GoldenD60/Skript#integer-based-commands)
+11. [Calculating '2 + 2'](https://github.com/GoldenD60/Skript#calculating-22)
+
 
 ### Installation
 

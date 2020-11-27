@@ -1,30 +1,43 @@
-## Welcome to GitHub Pages
+## Welcome to the Skript Documentation
 
-You can use the [editor on GitHub](https://github.com/GoldenD60/Skript/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+### Installation
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Skript is a lightweight easy-to-use coding language for games.
+To install, Check if you have these programs installed:
 
-### Markdown
+Python and VBScript
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+If you don't, then here are some downloads for them:
 
-```markdown
-Syntax highlighted code block
+Windows 7 and above or Linux or Mac OS X.
 
-# Header 1
-## Header 2
-### Header 3
+Python VBScript (you should have this already except from Windows XP users)
 
-- Bulleted
-- List
+To install python (instant download) go to: 
 
-1. Numbered
-2. List
+[Windows](https://www.python.org/ftp/python/3.9.0/python-3.9.0-amd64.exe)
 
-**Bold** and _Italic_ and `Code` text
+Linux/UNIX: https://www.python.org/downloads/release/python-390/
 
-[Link](url) and ![Image](src)
-```
+Max OS X: https://www.python.org/downloads/release/python-390/
+
+Other: https://www.python.org/download/other/
+
+To install VBScript (instant download) go to:
+
+Windows XP: https://www.microsoft.com/en-gb/download/confirmation.aspx?id=8247
+
+If you are a mac user, don't worry at all!
+
+Go to: http://www.barebones.com/products/textwrangler/
+
+To install for Batch and VBScript
+
+If you are a linux user, don't worry at all!
+
+Run this in the terminal: sudo apt-get install wine
+
+To install for VBScript (Linux already has Batch Script installed)
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 

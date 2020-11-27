@@ -13,9 +13,9 @@ You will need Windows 7 and above or Linux or Mac OS X.
 
 [Windows](https://www.python.org/ftp/python/3.9.0/python-3.9.0-amd64.exe)
 
-[Linux/Unix](https://www.python.org/downloads/release/python-390)
+[Linux/Unix](https://www.python.org/ftp/python/3.9.0/Python-3.9.0.tgz)
 
-[Max OS X](https://www.python.org/downloads/release/python-390)
+[Max OS X](https://www.python.org/ftp/python/3.9.0/python-3.9.0-macosx10.9.pkg)
 
 [Other](https://www.python.org/download/other)
 

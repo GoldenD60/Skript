@@ -18,14 +18,19 @@ Max OS X: https://www.python.org/downloads/release/python-390/
 Other: https://www.python.org/download/other/
 
 To install VBScript (instant download) go to:
+
 Windows XP: https://www.microsoft.com/en-gb/download/confirmation.aspx?id=8247
 
 If you are a mac user, don't worry at all!
+
 Go to: http://www.barebones.com/products/textwrangler/
+
 To install for Batch and VBScript
 
 If you are a linux user, don't worry at all!
+
 Run this in the terminal: sudo apt-get install wine
+
 To install for VBScript (Linux already has Batch Script installed)
 
 How to run skript:

@@ -58,7 +58,7 @@ Type "help" for more information.
 >
 ```
 
-Obviously I don't have the same Skript version as you, but it doesn't really matter too much. You can type in ```say``` and it should say back ```**print** >``` Now, this is where the Arguments comes in. Type in 'Hello World!' your Command Prompt/Terminal should look like this:
+Obviously I don't have the same Skript version as you, but it doesn't really matter too much. You can type in ```say``` and it should say back ```print >``` Now, this is where the Arguments comes in. Type in 'Hello World!' your Command Prompt/Terminal should look like this:
 
 ```
 > say

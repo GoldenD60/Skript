@@ -9,13 +9,14 @@ def run_command():
     # Code
     return
 
-button1 = tk.Button (root,text='hi',command=run_command,bg='green',fg='green')
-# Control Label
+# Control Button
+label1 = tk.Label(root, text='Hello this is some very long text, anyways I like peanut butter sandwiches :)')
+label1.config(font=('Comic Sans MS', 25))
 # Control Check Button
 # Control Entry
 # Control Listbox
 # Control Message
 # Control Radio Button
-canvas1.create_window(170, 130, window=button1)
+canvas1.create_window(170, 130, window=label1)
 
 root.mainloop()

@@ -133,14 +133,14 @@ goto :line
 :winwcontrol
 Set /P _inputname= winwcontrol(int) ^> 
 set "winwt=%_inputname%"
-for /L %%g in (1,1,%winwt%) do Set /P _inputname= winwcontrol(control) ^> 
-for /L %%g in (1,1,%winwt%) do if "%_inputname%"=="button" goto :button
-for /L %%g in (1,1,%winwt%) do if "%_inputname%"=="label" set "control=label"
-for /L %%g in (1,1,%winwt%) do if "%_inputname%"=="check button" set "control=check button"
-for /L %%g in (1,1,%winwt%) do if "%_inputname%"=="entry" set "control=entry"
-for /L %%g in (1,1,%winwt%) do if "%_inputname%"=="listbox" set "control=listbox"
-for /L %%g in (1,1,%winwt%) do if "%_inputname%"=="message" set "control=message"
-for /L %%g in (1,1,%winwt%) do if "%_inputname%"=="radio button" set "control=radio button"
+Set /P _inputname= winwcontrol(control) ^> 
+if "%_inputname%"=="button" goto :button
+if "%_inputname%"=="label" goto :label
+if "%_inputname%"=="check button" set "control=check button"
+if "%_inputname%"=="entry" set "control=entry"
+if "%_inputname%"=="listbox" set "control=listbox"
+if "%_inputname%"=="message" set "control=message"
+if "%_inputname%"=="radio button" set "control=radio button"
 goto :line
 :end
 :button
@@ -148,17 +148,38 @@ set "control=button"
 cd __wins__
 Set /P _inputname=winwcontrol(color[background]) ^> 
 Set "backcb=%_inputname%"
-Set /P _inputname=winwcontrol(color[foreground]) ^> 
-Set "forecb=%_inputname%"
+Set /P _inputname=winwcontrol(color[text]) ^> 
+Set "textcb=%_inputname%"
 Set /P _inputname=winwcontrol(text) ^> 
 Set "textb=%_inputname%"
 ping localhost -n 5 >nul
 copy empwin.py empwincopy.py
 cd ..
-cscript replace.vbs "%CD%\__wins__\empwincopy.py" "# Control Button" "button1 = tk.Button (root,text='%textb%',command=run_command,bg='%backcb%',fg='%forecb%')" 
+cscript replace.vbs "%CD%\__wins__\empwincopy.py" "# Control Button" "button1 = tk.Button (root,text='%textb%',command=run_command,bg='%backcb%',fg='%textcb%')" 
 cscript replace.vbs "%CD%\__wins__\empwincopy.py" "# Window" "canvas1.create_window(170, 130, window=button1)"
 cd __wins__
-echo Saved Window At /bin/__wins__/empwincopy.py
+echo Saved Window At %CD%/bin/__wins__/empwincopy.py
+py empwincopy.py
+cd ..
+goto :line
+:end
+:label
+set "control=label"
+cd __wins__
+Set /P _inputname=winwcontrol(text) ^> 
+Set "textl=%_inputname%"
+Set /P _inputname=winwcontrol(font) ^> 
+Set "fontl=%_inputname%"
+Set /P _inputname=winwcontrol(size[int]) ^> 
+Set "sizel=%_inputname%"
+ping localhost -n 5 >nul
+copy empwin.py empwincopy.py
+cd ..
+cscript replace.vbs "%CD%\__wins__\empwincopy.py" "# Control Label" "label1 = tk.Label(root, text='%textl%')"
+cscript replace.vbs "%CD%\__wins__\empwincopy.py" "# Control Font" "label1.config(font=('%fontl%', %sizel%))"
+cscript replace.vbs "%CD%\__wins__\empwincopy.py" "# Window" "canvas1.create_window(170, 130, window=label1)"
+cd __wins__
+echo Saved Window At %CD%empwincopy.py
 py empwincopy.py
 cd ..
 goto :line

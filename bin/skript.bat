@@ -14,7 +14,7 @@ set /P _inputname=^>
 if "%_inputname%"=="say" goto :print
 if "%_inputname%"=="exit" goto :exit
 if "%_inputname%"=="get input from user" goto :input
-if "%_inputname%"=="display in ascii text" goto :asciidisplay
+if "%_inputname%"=="display in ASCII text" goto :asciidisplay
 if "%_inputname%"=="calculate" goto :mathf
 if "%_inputname%"=="help" goto :help
 if "%_inputname%"=="documentation" goto :onlhelp

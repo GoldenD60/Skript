@@ -46,14 +46,13 @@ To run it, follow these steps:
 
 Let's do something basic, also you might be confused because the Command Prompt/Terminal says ```Do you want to open the console or the skript editor?``` just ignore this message for now. Let's talk about how it's done. Skript is just like you are typing in english sentences, if you want it to say something you put _say_ but, Skript need some 'Arguments' or some people call them 'Parameters' but Arguments and Parameters are the exact same thing. Basically, it needs some information to run the command. So if we go back to the Command Prompt/Terminal and it want to know if you want to open the console or the skript editor. Because you are just starting out with no experience, just type ```console``` and you need to spell it **exactly**. Once you have typed in that, it's going to load the console up. You should have something like this:
 ```
-C:\Users\David>echo off
 Do you want to open the console or the skript editor? console
 Skript 1.0.4
 Type "help" for more information.
 >
 ```
 
-Obviously I don't have the same Skript version as you, and probably not the same operating system as you, but it doesn't really matter too much. You can type in ```say``` and it should say back ```print >``` Now, this is where the Arguments comes in. Type in 'Hello World!' your Command Prompt/Terminal should look like this:
+Obviously I probably don't have the same Skript version as you, but it doesn't really matter too much. You can type in ```say``` and it should say back ```print >``` Now, this is where the Arguments comes in. Type in 'Hello World!' your Command Prompt/Terminal should look like this:
 
 ```
 > say

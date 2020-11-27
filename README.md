@@ -1,2 +1,2 @@
 # Skript
-go to the website [here](https://goldend60.github.io/Skript/)
+Go to the website [here](https://goldend60.github.io/Skript/)

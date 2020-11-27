@@ -6,7 +6,7 @@ if "%_inputname%"=="editor" goto :editor
 cls
 goto :start
 :console
-echo Skript 1.0.1
+echo Skript 1.0.3
 echo Type "help" for more information.
 goto :line
 :line
@@ -21,6 +21,7 @@ if "%_inputname%"=="documentation" goto :onlhelp
 if "%_inputname%"=="onlinehelp" goto :onlhelp
 if "%_inputname%"=="open an empty window" goto :empwin
 if "%_inputname%"=="play a sound" goto :playsound
+if "%_inputname%"=="open a window with controls" goto :winwcontrol
 echo That command doesn't exist
 goto :line
 :print
@@ -119,7 +120,7 @@ cls
 goto :line
 :empwin
 cd __wins__
-py empwin.py
+py empwinun.py
 cd ..
 goto :line
 :end
@@ -127,6 +128,39 @@ goto :line
 Set /P _inputname=playsound(soundFile [.aac, .ac3, .aif, .aifc, .aiff, .amr, .au, .caf, .flac, .m4a, .m4b, .mp3, .oga, .sfark, .voc, .wav, .weba, .wma]) ^> 
 start %_inputname%
 start 
+goto :line
+:end
+:winwcontrol
+Set /P _inputname= winwcontrol(int) ^> 
+set "winwt=%_inputname%"
+for /L %%g in (1,1,%winwt%) do Set /P _inputname= winwcontrol(control) ^> 
+for /L %%g in (1,1,%winwt%) do if "%_inputname%"=="button" goto :button
+for /L %%g in (1,1,%winwt%) do if "%_inputname%"=="label" set "control=label"
+for /L %%g in (1,1,%winwt%) do if "%_inputname%"=="check button" set "control=check button"
+for /L %%g in (1,1,%winwt%) do if "%_inputname%"=="entry" set "control=entry"
+for /L %%g in (1,1,%winwt%) do if "%_inputname%"=="listbox" set "control=listbox"
+for /L %%g in (1,1,%winwt%) do if "%_inputname%"=="message" set "control=message"
+for /L %%g in (1,1,%winwt%) do if "%_inputname%"=="radio button" set "control=radio button"
+goto :line
+:end
+:button
+set "control=button"
+cd __wins__
+Set /P _inputname=winwcontrol(color[background]) ^> 
+Set "backcb=%_inputname%"
+Set /P _inputname=winwcontrol(color[foreground]) ^> 
+Set "forecb=%_inputname%"
+Set /P _inputname=winwcontrol(text) ^> 
+Set "textb=%_inputname%"
+ping localhost -n 5 >nul
+copy empwin.py empwincopy.py
+cd ..
+cscript replace.vbs "%CD%\__wins__\empwincopy.py" "# Control Button" "button1 = tk.Button (root,text='%textb%',command=run_command,bg='%backcb%',fg='%forecb%')" 
+cscript replace.vbs "%CD%\__wins__\empwincopy.py" "# Window" "canvas1.create_window(170, 130, window=button1)"
+cd __wins__
+echo Saved Window At /bin/__wins__/empwincopy.py
+py empwincopy.py
+cd ..
 goto :line
 :end
 :exit

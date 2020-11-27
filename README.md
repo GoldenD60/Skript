@@ -1,6 +1,17 @@
 ## Welcome to the Skript Documentation (copy from [online documentation](https://goldend60.github.io/Skript))
 
-## Context
+### Context
+
+1. [Installation](https://github.com/GoldenD60/Skript#installation)
+2. [Installation for Python](https://github.com/GoldenD60/Skript#python)
+3. [Installation for VBScript](https://github.com/GoldenD60/Skript#vbscript)
+4. [Getting Started](https://github.com/GoldenD60/Skript#getting-started)
+5. [How To Run](https://github.com/GoldenD60/Skript#how-to-run)
+6. [Text-Based Commands](https://github.com/GoldenD60/Skript#text-based-commands)
+7. [Saying "Hello World"](https://github.com/GoldenD60/Skript#saying-hello-world)
+8. [Getting User Input](https://github.com/GoldenD60/Skript#getting-user-input)
+9. [Displaying a shape in ASCII text](https://github.com/GoldenD60/Skript#displaying-a-shape-in-ascii-text)
+10. [Integer-Based Commands]
 
 ### Installation
 
@@ -107,6 +118,8 @@ asciidisplay [Triangle/Square]> triangle
 ```
 
 ## Integer-Based Commands
+
+### Calculating '2+2'
 
 I need some math for my maths homework! Good thing is I have got skript, Let's do some calculating. To start doing some math, type ```calculate``` now this command is unique to every other command. Because it needs more than 1 argument, so type the operation, in this case '+', then the first number of the calculation. What I mean by this is let's say we have `a+b`, the first number of the calculation is `a`. Let's do the calculation 2 + 2, Make sure that when you do your calculation. Just make sure your numbers are under 2 billion or 2,147,483,647 or else it will show you an error. So let's type in the first number of the calculation '2', then. Now the last number of the calculation, 2, your screen should look like this:
 

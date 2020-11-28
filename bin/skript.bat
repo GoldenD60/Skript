@@ -30,20 +30,8 @@ set "pr=%_inputname%"
 echo %_inputname%
 goto :line
 :end
-:sout
-set /P _inputname=sout ^> 
-set "pr=%_inputname%"
-echo %_inputname%
-goto :line
-:end
 :input
 set /P _inputname=input ^> 
-set "in=%_inputname%"
-set /P _inputname=%_inputname%
-goto :line
-:end
-:sin
-set /P _inputname=sin ^> 
 set "in=%_inputname%"
 set /P _inputname=%_inputname%
 goto :line
@@ -89,19 +77,19 @@ echo %result%
 goto :line
 :end
 :help
-echo print/sout: Prints message
-echo exit: Exit skript to command prompt
-echo input/sin: Gets input from user
-echo asciidisplay: Displays a shape on the screen
-echo loop: Loops code certain number of times
-echo mathf: Used for math in 32-bit integer limit. Except from sqrt and exp.
-echo help: Displays this.
-echo documentation/onlinehelp: Shows online help.
-echo playsound: Plays a sound.
-goto :line
+echo say: Says an entered string
+echo exit: Exit skript to Command Prompt/Terminal
+echo get input from user: gets input from user
+echo display in ASCII text: Displays a shape in ASCII text
+echo calculate: Calculate with the entered integers and operations
+echo help: Displays this
+echo documentation/online help: Gets online help from https://goldend60.github.io/Skript
+echo open an empty window: Opens an empty window
+echo playsound: Plays music
+echo open a window with controls: Opens a window with custom controls
 :end
 :onlhelp
-start "" https://github.com/GoldenD60/Skript/wiki
+start "" https://goldend60.github.io/Skript/
 goto :line
 :end
 :editor

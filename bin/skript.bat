@@ -1,4 +1,4 @@
-echo off
+@echo off
 :start
 set /P _inputname= Do you want to open the console or the skript editor? 
 if "%_inputname%"=="console" goto :console

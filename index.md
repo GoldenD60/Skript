@@ -1,4 +1,4 @@
-## Welcome to the Skript Documentation (copy from [online documentation](https://goldend60.github.io/Skript))
+## Welcome to the Skript Documentation
 
 ### Context
 

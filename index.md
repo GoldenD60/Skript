@@ -78,6 +78,29 @@ print > Hello World!
 Hello World!
 > 
 ```
+
+<details>
+  <summary>How does the code work?</summary>
+    
+  ```batch
+  
+  if "%_inputname%"=="say" goto :print
+  
+  :print
+  
+  set /P _inputname=print ^> 
+  
+  set "pr=%_inputname%"
+  
+  echo %_inputname%
+  
+  goto :line
+  
+  :end
+  ```
+  
+</details>
+
 ### Getting User Input
 
 Now the rest of the coding is simple. To get input from the user just type quite simply 'get input from user', it should look something like this:
@@ -86,6 +109,28 @@ Skript 1.0.4
 Type "help" for more information.
 > get input from user
 ```
+
+<details>
+  <summary>How does the code work?</summary>
+    
+  ```batch
+  
+  if "%_inputname%"=="get input from user" goto :input
+  
+  :input
+  
+  set /P _inputname=input ^> 
+
+  set "in=%_inputname%"
+
+  set /P _inputname=%_inputname%
+
+  goto :line
+
+  :end
+  ```
+  
+</details>
 
 ### Displaying a shape in ASCII text
 
@@ -119,13 +164,159 @@ asciidisplay [Triangle/Square]> triangle
 >
 ```
 
+<details>
+  <summary>How does the code work?</summary>
+    
+  ```batch
+  if "%_inputname%"=="display in ASCII text" goto :asciidisplay
+  :asciidisplay
+  set /P _inputname=asciidisplay [Triangle/Square]^> 
+  if "%_inputname%"=="triangle" goto :dtriangle
+  if "%_inputname%"=="square" goto :dsquare
+  goto :line
+  :end
+  :dtriangle
+  set "asciid=%_inputname%"
+  echo     ^/^\
+  echo    ^/##^\
+  echo   ^/####^\
+  echo  ^/######^\
+  echo ^/________^\
+  goto :line
+  :end
+  :dsquare
+  set "asciid=%_inputname%"
+  echo ___________
+  echo ^|         ^|
+  echo ^|         ^|
+  echo ^|         ^|
+  echo ^|_________^|
+  goto :line
+  :end
+  ```
+  
+</details>
+
 ### Creating An Empty Window
 
 Time to get advanced, let's try and create a resizable empty window. Type in `Open an empty window`, and it's that simple! If you have python installed, it should show an empty window.
 
 ![image](https://user-images.githubusercontent.com/65703529/100498981-eb0ab880-315d-11eb-9a3c-2e82d2925585.png)
 
-### Creating A Window With Controls
+<details>
+  <summary>How does the code work?</summary>
+    
+  ```batch
+  if "%_inputname%"=="open an empty window" goto :empwin
+  :empwin
+  cd __wins__
+  py empwinun.py
+  cd ..
+  goto :line
+  :end
+  ```
+  
+</details>
+
+## Creating A Window With Controls
+
+<details>
+  <summary>How does the code work?</summary>
+    
+  ```batch
+if "%_inputname%"=="open a window with controls" goto :winwcontrol
+:winwcontrol
+Set /P _inputname= winwcontrol(control) ^> 
+if "%_inputname%"=="button" goto :button
+if "%_inputname%"=="label" goto :label
+if "%_inputname%"=="check box" goto :checkbutton
+if "%_inputname%"=="entry" goto :entry
+if "%_inputname%"=="list box" goto :listbox
+if "%_inputname%"=="message" goto :messagec
+if "%_inputname%"=="radio button" goto :radiobutton
+goto :line
+:end
+:button
+set "control=button"
+cd __wins__
+Set /P _inputname=winwcontrol(color[background]) ^> 
+Set "backcb=%_inputname%"
+Set /P _inputname=winwcontrol(color[text]) ^> 
+Set "textcb=%_inputname%"
+Set /P _inputname=winwcontrol(text) ^> 
+Set "textb=%_inputname%"
+ping localhost -n 5 >nul
+copy empwin.py empwincopy.py
+cd ..
+cscript replace.vbs "%CD%\__wins__\empwincopy.py" "# Control Button" "button1 = tk.Button (root,text='%textb%',command=run_command,bg='%backcb%',fg='%textcb%')" 
+cscript replace.vbs "%CD%\__wins__\empwincopy.py" "# Window" "canvas1.create_window(170, 130, window=button1)"
+cscript replace.vbs "%CD%\__wins__\empwincopy.py" "# Pack" "button1.pack()"
+cd __wins__
+echo Saved Window At %CD%\empwincopy.py
+py empwincopy.py
+cd ..
+goto :line
+:end
+:label
+set "control=label"
+cd __wins__
+Set /P _inputname=winwcontrol(text) ^> 
+Set "textl=%_inputname%"
+Set /P _inputname=winwcontrol(font) ^> 
+Set "fontl=%_inputname%"
+Set /P _inputname=winwcontrol(size[int]) ^> 
+Set "sizel=%_inputname%"
+ping localhost -n 5 >nul
+copy empwin.py empwincopy.py
+cd ..
+cscript replace.vbs "%CD%\__wins__\empwincopy.py" "# Control Label" "label1 = tk.Label(root, text='%textl%')"
+cscript replace.vbs "%CD%\__wins__\empwincopy.py" "# Control Font" "label1.config(font=('%fontl%', %sizel%))"
+cscript replace.vbs "%CD%\__wins__\empwincopy.py" "# Window" "canvas1.create_window(170, 130, window=label1)"
+cscript replace.vbs "%CD%\__wins__\empwincopy.py" "# Pack" "label1.pack()"
+cd __wins__
+echo Saved Window At %CD%\empwincopy.py
+py empwincopy.py
+cd ..
+goto :line
+:end
+:checkbutton
+set "control=label"
+cd __wins__
+Set /P _inputname=winwcontrol(text) ^> 
+Set "textcbb=%_inputname%"
+Set /P _inputname=winwcontrol(size[int]) ^> 
+Set "sizecbb=%_inputname%"
+Set /A propsizecbb=%sizecbb%/2
+ping localhost -n 5 >nul
+copy empwin.py empwincopy.py
+cd ..
+cscript replace.vbs "%CD%\__wins__\empwincopy.py" "# Control Check Button" "checkbutton1 = tk.Checkbutton(root, text = '%textcbb%', variable = checkvar1, onvalue = 1, offvalue = 0, height=%propsizecbb%, width = %propsizecbb%)"
+cscript replace.vbs "%CD%\__wins__\empwincopy.py" "# Control Check Box Var" "checkvar1 = tk.IntVar()"
+cscript replace.vbs "%CD%\__wins__\empwincopy.py" "# Window" "canvas1.create_window(170, 130, window=checkbutton1)"
+cscript replace.vbs "%CD%\__wins__\empwincopy.py" "# Pack" "checkbutton1.pack()"
+cd __wins__
+echo Saved Window At %CD%\empwincopy.py
+py empwincopy.py
+cd ..
+goto :line
+:end
+:entry
+set "control=entry"
+cd __wins__
+copy empwin.py empwincopy.py
+cd ..
+cscript replace.vbs "%CD%\__wins__\empwincopy.py" "# Control Entry" "entry1 = tk.Entry(root)"
+cscript replace.vbs "%CD%\__wins__\empwincopy.py" "# Window" "canvas1.create_window(170, 130, window=entry1)"
+cscript replace.vbs "%CD%\__wins__\empwincopy.py" "# Pack" "entry1.pack()"
+cd __wins__
+echo Saved Window At %CD%\empwincopy.py
+py empwincopy.py
+cd ..
+goto :line
+:end
+  ```
+  
+</details>
 
 ### Labels
 
@@ -227,8 +418,28 @@ mathf(int[2]) > 2
 >
 ```
 
+<details>
+  <summary>How does the code work?</summary>
+    
+  ```batch
+if "%_inputname%"=="calculate" goto :mathf
+:mathf
+Set /P _inputname=mathf(operator) ^> 
+Set "op=%_inputname%"
+Set /P _inputname=mathf(int[1]) ^> 
+Set "int1=%_inputname%"
+Set /P _inputname=mathf(int[2]) ^> 
+Set "int2=%_inputname%"
+Set /A result=%int1%%op%%int2%
+echo %result%
+goto :line
+:end
+  ```
+  
+</details>
+
 ## Executable Commands
 
 ### Exiting Skript
 
-By typing 'Exit' we can exit skript. Finally! I am done with this documentation, please can I get a cup of coffee after all this work? * sips coffee * what a great way to end this 143-lines of documentation, at last!
+By typing 'Exit' we can exit skript. Finally! I am done with this documentation, please can I get a cup of coffee after all this work? * sips coffee * what a great way to end this 445-lines of documentation, at last!

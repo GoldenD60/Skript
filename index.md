@@ -11,8 +11,10 @@
 7. [Saying "Hello World"](https://goldend60.github.io/Skript#saying-hello-world)
 8. [Getting User Input](https://goldend60.github.io/Skript#getting-user-input)
 9. [Displaying a shape in ASCII text](https://goldend60.github.io/Skript#displaying-a-shape-in-ascii-text)
-10. [Integer-Based Commands](https://goldend60.github.io/Skript#integer-based-commands)
-11. [Calculating '2 + 2'](https://goldend60.github.io/Skript#calculating-22)
+10. [Creating An Empty Window](https://goldend60.github.io/Skript#creating-an-empty-window)
+11. [Creating A Window With Controls](https://goldend60.github.io/Skript#creating-a-window-with-controls)
+11. [Integer-Based Commands](https://goldend60.github.io/Skript#integer-based-commands)
+12. [Calculating '2 + 2'](https://goldend60.github.io/Skript#calculating-22)
 
 
 ### Installation

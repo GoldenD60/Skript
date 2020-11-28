@@ -119,8 +119,6 @@ start
 goto :line
 :end
 :winwcontrol
-Set /P _inputname= winwcontrol(int) ^> 
-set "winwt=%_inputname%"
 Set /P _inputname= winwcontrol(control) ^> 
 if "%_inputname%"=="button" goto :button
 if "%_inputname%"=="label" goto :label

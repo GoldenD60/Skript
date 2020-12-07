@@ -1,4 +1,5 @@
 @echo off
+cls
 :start
 set /P _inputname= Do you want to open the console or the skript editor? 
 if "%_inputname%"=="console" goto :console
@@ -93,17 +94,7 @@ start "" https://goldend60.github.io/Skript/
 goto :line
 :end
 :editor
-echo Editor in development, going to console
-ping localhost -n 1 >nul
-cls
-echo Editor in development, going to console.
-ping localhost -n 1 >nul
-cls
-echo Editor in development, going to console..
-ping localhost -n 1 >nul
-cls
-echo Editor in development, going to console...
-ping localhost -n 1 >nul
+skripteditor
 cls
 goto :line
 :empwin
